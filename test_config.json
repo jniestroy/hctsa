@@ -1,0 +1,14 @@
+{
+  "ST_Length": [{}],
+  "DN_Burstiness": [{}],
+  "DN_MinMax": [
+    {
+      "transform": "x_z",
+      "minOrMax": "'max'"
+    },
+    {
+      "transform": "x_z",
+      "minOrMax": "'min'"
+    }
+  ]
+}
