@@ -1,63 +1,86 @@
 % Load JSON config
-configData = fileread('./Convert/cleanedMasterOperations.json');
+configData = fileread('./Convert/filteredMasterOperations.json');
 config = jsondecode(configData);
 
-% Read parquet file
-input_file = 'initial_tests.parquet';
+input_file = 'all_samples.parquet';
 data = parquetread(input_file);
 
+% Identify rows with missing data in processed columns
+rows_with_missing = any(ismissing(data(:, 5:304)), 2);
+
+% Remove rows with missing data in processed columns
+data_cleaned = data(~rows_with_missing, :);
+
 % Separate unprocessed and processed columns
-unprocessed_columns = data(:, 1:3);
-processed_columns = data(:, 4:303);
+unprocessed_columns = data_cleaned(:, 1:4);
+processed_columns = data_cleaned(:, 5:304);
+
 
 % Initialize results storage
-all_results = [];
+all_results = cell(height(processed_columns), 1);
 all_fieldnames = {};
 
-% Process each series in processed_columns
-for i = 1:height(processed_columns)
+% Initialize compute time storage
+compute_times = struct();
+
+% Set up parallel pool
+if isempty(gcp('nocreate'))
+    parpool(8);
+end
+
+% Ensure parallel environment is set up correctly
+parfevalOnAll(@() fprintf('Parallel environment set up.\n'), 0);
+
+% Suppress warnings and prints
+warning('off', 'all');
+parfevalOnAll(@() warning('off', 'all'), 0);
+parfevalOnAll(@() evalc('disp(''Suppressing prints'')'), 0);
+
+% Process each series in processed_columns in parallel
+parfor i = 1:height(processed_columns)
     series = table2array(processed_columns(i, :));
-    results = run_analysis(series, config, OPERATIONS_MAP);
+    [results, times] = run_analysis(series, config, OPERATIONS_MAP);
     results.index = i;
     flattened_results = flatten_struct(results);
     
-    % Collect field names
-    all_fieldnames = union(all_fieldnames, fieldnames(flattened_results));
+    % Store flattened results in cell array
+    all_results{i} = flattened_results;
     
-    % Ensure all fields are present in the current result
-    missing_fields = setdiff(all_fieldnames, fieldnames(flattened_results));
-    for j = 1:numel(missing_fields)
-        flattened_results.(missing_fields{j}) = NaN;
+    % Store compute times
+    compute_times(i).times = times;
+    
+    % Display progress every 100 rows
+    if mod(i, 100) == 0
+        fprintf('Processed %d out of %d rows.\n', i, height(processed_columns));
     end
-    
-    % Ensure all previous results have the new fields
-    if ~isempty(all_results)
-        missing_fields_in_all = setdiff(all_fieldnames, fieldnames(all_results));
-        for j = 1:numel(missing_fields_in_all)
-            [all_results.(missing_fields_in_all{j})] = deal(NaN);
-        end
-    end
-    
-    all_results = [all_results; flattened_results];
+end
+
+% Collect all field names
+for i = 1:numel(all_results)
+    all_fieldnames = union(all_fieldnames, fieldnames(all_results{i}));
 end
 
 % Ensure all results have consistent fields
 for i = 1:numel(all_results)
-    missing_fields = setdiff(all_fieldnames, fieldnames(all_results(i)));
+    missing_fields = setdiff(all_fieldnames, fieldnames(all_results{i}));
     for j = 1:numel(missing_fields)
-        all_results(i).(missing_fields{j}) = NaN;
+        all_results{i}.(missing_fields{j}) = NaN;
     end
 end
 
 % Convert results to table with consistent fields
-results_table = struct2table(all_results);
+results_table = struct2table([all_results{:}]);
 
 % Merge unprocessed columns with results
 final_table = [unprocessed_columns, results_table];
 
-% Write final table to a CSV file
-output_csv_file = 'analysis_results.csv';
-writetable(final_table, output_csv_file);
+% Save final table to a .mat file
+output_mat_file = 'analysis_results.mat';
+save(output_mat_file, 'final_table');
+
+% Save compute times to a .mat file
+output_times_file = 'compute_times.mat';
+save(output_times_file, 'compute_times');
 
 % Function to flatten a nested struct
 function flat_struct = flatten_struct(s)
@@ -79,8 +102,9 @@ function flat_struct = flatten_struct(s)
     end
 end
 
-function results = run_analysis(series, config, operations_map)
+function [results, times] = run_analysis(series, config, operations_map)
     results = struct();
+    times = struct();
     config_fields = fieldnames(config);
     for i = 1:numel(config_fields)
         func_name = config_fields{i};
@@ -109,11 +133,15 @@ function results = run_analysis(series, config, operations_map)
                     param_str = param_str(1:end-1); % Remove trailing underscore
                     param_str = regexprep(param_str, '[^a-zA-Z0-9_]', '_'); % Replace invalid characters
                     result_key = sprintf('%s_%s', func_name, param_str);
+                    
+                    % Track computation time
+                    tic;
                     try
                         results.(result_key) = call_function_with_params(func, transformed_series, params);
                     catch
                         results.(result_key) = NaN;
                     end
+                    times.(result_key) = toc;
                 end
             elseif numel(param_sets) > 1 % Handle struct arrays
                 for j = 1:numel(param_sets)
@@ -131,11 +159,15 @@ function results = run_analysis(series, config, operations_map)
                         fieldnames(params), struct2cell(params), 'UniformOutput', false), '_');
                     param_str = regexprep(param_str, '[^a-zA-Z0-9_]', '_'); % Replace invalid characters
                     result_key = sprintf('%s_%s', func_name, param_str);
+                    
+                    % Track computation time
+                    tic;
                     try
                         results.(result_key) = call_function_with_params(func, transformed_series, params);
                     catch
                         results.(result_key) = NaN;
                     end
+                    times.(result_key) = toc;
                 end
             else % Handle single struct
                 params = param_sets;
@@ -158,11 +190,15 @@ function results = run_analysis(series, config, operations_map)
                 param_str = param_str(1:end-1); % Remove trailing underscore
                 param_str = regexprep(param_str, '[^a-zA-Z0-9_]', '_'); % Replace invalid characters
                 result_key = sprintf('%s_%s', func_name, param_str);
+                
+                % Track computation time
+                tic;
                 try
                     results.(result_key) = call_function_with_params(func, transformed_series, params);
                 catch
                     results.(result_key) = NaN;
                 end
+                times.(result_key) = toc;
             end
         else
             results.(func_name) = "Missing Operation";

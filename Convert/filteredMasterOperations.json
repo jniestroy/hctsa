@@ -625,16 +625,6 @@
     },
     {
       "transform": "x_z",
-      "minWhat": "mi-kraskov1",
-      "extraParam": 4
-    },
-    {
-      "transform": "x_z",
-      "minWhat": "mi-kraskov2",
-      "extraParam": 4
-    },
-    {
-      "transform": "x_z",
       "minWhat": "mi-hist",
       "extraParam": 5
     },
@@ -653,18 +643,6 @@
       "transform": "x_z",
       "minWhat": "mi-gaussian",
       "extraParam": "[]",
-      "minNotMax": false
-    },
-    {
-      "transform": "x_z",
-      "minWhat": "mi-kraskov1",
-      "extraParam": 4,
-      "minNotMax": false
-    },
-    {
-      "transform": "x_z",
-      "minWhat": "mi-kraskov2",
-      "extraParam": 4,
       "minNotMax": false
     },
     {
@@ -1377,11 +1355,6 @@
       "beta": 10
     }
   ],
-  "DT_IsSeasonal": [
-    {
-      "transform": "x_z"
-    }
-  ],
   "SY_StatAv": [
     {
       "transform": "x_z",
@@ -1791,167 +1764,6 @@
     },
     {
       "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 2,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 2,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 2,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 5,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 5,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 5,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 10,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 10,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "std",
-      "numSeg": 10,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "sampen",
-      "numSeg": 2,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "sampen",
-      "numSeg": 5,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "sampen",
-      "numSeg": 10,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "sampen",
-      "numSeg": 10,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 2,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 2,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 2,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 5,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 5,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 5,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 10,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 10,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "ent",
-      "acrossWinStat": "ent",
-      "numSeg": 10,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "sampen",
-      "acrossWinStat": "std",
-      "numSeg": 2,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
       "windowStat": "sampen",
       "acrossWinStat": "std",
       "numSeg": 2,
@@ -2429,90 +2241,6 @@
     {
       "transform": "x_z",
       "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 2,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 2,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 2,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 5,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 5,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 5,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 10,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 10,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "std",
-      "numSeg": 10,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "sampen",
-      "numSeg": 2,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "sampen",
-      "numSeg": 5,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "sampen",
-      "numSeg": 10,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
       "acrossWinStat": "sampen",
       "numSeg": 10,
       "incMove": 2
@@ -2520,72 +2248,9 @@
     {
       "transform": "x_z",
       "windowStat": "lillie",
-      "acrossWinStat": "sampen",
-      "numSeg": 10,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "ent",
-      "numSeg": 2,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "ent",
-      "numSeg": 2,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "ent",
-      "numSeg": 2,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "ent",
-      "numSeg": 5,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
       "acrossWinStat": "ent",
       "numSeg": 5,
       "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "ent",
-      "numSeg": 5,
-      "incMove": 10
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "ent",
-      "numSeg": 10,
-      "incMove": 1
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "ent",
-      "numSeg": 10,
-      "incMove": 2
-    },
-    {
-      "transform": "x_z",
-      "windowStat": "lillie",
-      "acrossWinStat": "ent",
-      "numSeg": 10,
-      "incMove": 10
     },
     {
       "transform": "x_z",
@@ -2778,43 +2443,6 @@
     {
       "transform": "x_z",
       "n": 10
-    }
-  ],
-  "SY_StdNthDerChange": [
-    {
-      "transform": "x_z"
-    }
-  ],
-  "SY_SpreadRandomLocal": [
-    {
-      "transform": "x_z",
-      "l": "ac2",
-      "numSegs": 100,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "l": "ac5",
-      "numSegs": 100,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "l": 50,
-      "numSegs": 100,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "l": 100,
-      "numSegs": 100,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "l": 200,
-      "numSegs": 100,
-      "randomSeed": "default"
     }
   ],
   "SY_DriftingMean": [
@@ -3685,17 +3313,6 @@
       "randomSeed": "10}"
     }
   ],
-  "NL_DVV": [
-    {
-      "transform": "x_z",
-      "m": 3,
-      "numDVs": 100,
-      "nd": 2,
-      "Ntv": 50,
-      "numSurr": 10,
-      "randomSeed": "default"
-    }
-  ],
   "DN_OutlierTest": [
     {
       "transform": "x_z",
@@ -3736,64 +3353,6 @@
   "DK_theilerQ": [
     {
       "transform": "x_z"
-    }
-  ],
-  "CP_wavelet_varchg": [
-    {
-      "transform": "x_z",
-      "wName": "db3",
-      "level": 2,
-      "maxnchpts": 10,
-      "minDelay": 0.01
-    },
-    {
-      "transform": "x_z",
-      "wName": "db3",
-      "level": 3,
-      "maxnchpts": 10,
-      "minDelay": 0.01
-    },
-    {
-      "transform": "x_z",
-      "wName": "db3",
-      "level": 4,
-      "maxnchpts": 10,
-      "minDelay": 0.01
-    },
-    {
-      "transform": "x_z",
-      "wName": "db3",
-      "level": 5,
-      "maxnchpts": 10,
-      "minDelay": 0.01
-    },
-    {
-      "transform": "x_z",
-      "wName": "sym2",
-      "level": 2,
-      "maxnchpts": 10,
-      "minDelay": 0.01
-    },
-    {
-      "transform": "x_z",
-      "wName": "sym2",
-      "level": 3,
-      "maxnchpts": 10,
-      "minDelay": 0.01
-    },
-    {
-      "transform": "x_z",
-      "wName": "sym2",
-      "level": 4,
-      "maxnchpts": 10,
-      "minDelay": 0.01
-    },
-    {
-      "transform": "x_z",
-      "wName": "sym2",
-      "level": 5,
-      "maxnchpts": 10,
-      "minDelay": 0.01
     }
   ],
   "EN_MS_LZcomplexity": [
@@ -4048,21 +3607,9 @@
       "estMethod": "gaussian"
     },
     {
-      "transform": "x_z",
-      "maxTau": 40,
-      "estMethod": "kraskov1",
-      "extraParam": 4
-    },
-    {
       "transform": "diff(x_z)",
       "maxTau": 20,
       "estMethod": "gaussian"
-    },
-    {
-      "transform": "diff(x_z)",
-      "maxTau": 20,
-      "estMethod": "kraskov1",
-      "extraParam": 4
     }
   ],
   "CO_CompareMinAMI": [
@@ -4087,78 +3634,7 @@
       "numBins": "[2:80]"
     }
   ],
-  "CO_AddNoise": [
-    {
-      "transform": "x_z",
-      "tau": 1,
-      "amiMethod": "quantiles",
-      "extraParam": 10,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": "ac",
-      "amiMethod": "quantiles",
-      "extraParam": 10,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": 1,
-      "amiMethod": "even",
-      "extraParam": 10,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": "ac",
-      "amiMethod": "even",
-      "extraParam": 10,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": 1,
-      "amiMethod": "std1",
-      "extraParam": 10,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": "ac",
-      "amiMethod": "std1",
-      "extraParam": 10,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": 1,
-      "amiMethod": "gaussian",
-      "extraParam": "[]",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": "ac",
-      "amiMethod": "gaussian",
-      "extraParam": "[]",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": 1,
-      "amiMethod": "kraskov1",
-      "extraParam": 4,
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": "ac",
-      "amiMethod": "kraskov1",
-      "extraParam": 4,
-      "randomSeed": "default"
-    }
-  ],
+
   "SB_TransitionMatrix": [
     {
       "transform": "x_z",
@@ -4225,10 +3701,6 @@
     {
       "transform": "x_z",
       "stopWhen": "drown"
-    },
-    {
-      "transform": "x_z",
-      "stopWhen": "posDrown"
     }
   ],
   "CO_Embed2_Basic": [
@@ -4239,11 +3711,6 @@
     {
       "transform": "x_z",
       "tau": "tau"
-    }
-  ],
-  "PD_PeriodicityWang": [
-    {
-      "transform": "x_z"
     }
   ],
   "PH_ForcePotential": [
@@ -4383,11 +3850,6 @@
       "howToMove": "pts"
     }
   ],
-  "CO_StickAngles": [
-    {
-      "transform": "x_z"
-    }
-  ],
   "CO_Embed2": [
     {
       "transform": "x_z",
@@ -4418,16 +3880,6 @@
       "tau": "tau",
       "shape": "circle",
       "r": 1
-    }
-  ],
-  "NW_VisibilityGraph": [
-    {
-      "transform": "x_z",
-      "meth": "horiz"
-    },
-    {
-      "transform": "x_z",
-      "meth": "norm"
     }
   ],
   "SY_DynWin": [
@@ -4870,144 +4322,6 @@
       "preProcessHow": "rescale_tau"
     }
   ],
-  "EN_Randomize": [
-    {
-      "transform": "x_z",
-      "randomizeHow": "statdist",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "randomizeHow": "dyndist",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "randomizeHow": "permute",
-      "randomSeed": "default"
-    }
-  ],
-  "FC_LocalSimple": [
-    {
-      "transform": "x_z",
-      "forecastMeth": "mean",
-      "trainLength": 1
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "mean",
-      "trainLength": 2
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "mean",
-      "trainLength": 3
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "mean",
-      "trainLength": 4
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "mean",
-      "trainLength": "ac"
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "median",
-      "trainLength": 3
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "median",
-      "trainLength": 5
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "median",
-      "trainLength": 7
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "lfit",
-      "trainLength": 2
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "lfit",
-      "trainLength": 3
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "lfit",
-      "trainLength": 4
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "lfit",
-      "trainLength": 5
-    },
-    {
-      "transform": "x_z",
-      "forecastMeth": "lfit",
-      "trainLength": "ac"
-    }
-  ],
-  "FC_LoopLocalSimple": [
-    {
-      "transform": "x_z",
-      "forecastMeth": "mean"
-    }
-  ],
-  "DN_SimpleFit": [
-    {
-      "transform": "x_z",
-      "dmodel": "gauss1",
-      "numBins": 0
-    },
-    {
-      "transform": "x_z",
-      "dmodel": "gauss1",
-      "numBins": "sqrt"
-    },
-    {
-      "transform": "x_z",
-      "dmodel": "gauss2",
-      "numBins": 0
-    },
-    {
-      "transform": "x_z",
-      "dmodel": "gauss2",
-      "numBins": "sqrt"
-    },
-    {
-      "transform": "x_z",
-      "dmodel": "exp1",
-      "numBins": 0
-    },
-    {
-      "transform": "x_z",
-      "dmodel": "exp1",
-      "numBins": "sqrt"
-    },
-    {
-      "dmodel": "power1",
-      "numBins": "sqrt"
-    },
-    {
-      "transform": "x_z",
-      "dmodel": "sin1"
-    },
-    {
-      "transform": "x_z",
-      "dmodel": "sin2"
-    },
-    {
-      "transform": "x_z",
-      "dmodel": "sin3"
-    }
-  ],
   "DN_CompareKSFit": [
     {
       "whatDistn": "norm"
@@ -5019,39 +4333,13 @@
       "whatDistn": "uni"
     },
     {
-      "whatDistn": "beta"
-    },
-    {
-      "whatDistn": "rayleigh"
-    },
-    {
       "whatDistn": "exp"
-    },
-    {
-      "whatDistn": "gamma"
     },
     {
       "whatDistn": "logn"
     },
     {
       "whatDistn": "wbl"
-    }
-  ],
-  "DN_OutlierInclude": [
-    {
-      "transform": "x_z",
-      "thresholdHow": "abs",
-      "inc": 0.01
-    },
-    {
-      "transform": "x_z",
-      "thresholdHow": "pos",
-      "inc": 0.01
-    },
-    {
-      "transform": "x_z",
-      "thresholdHow": "neg",
-      "inc": 0.01
     }
   ],
   "ST_LocalExtrema": [
@@ -5256,15 +4544,6 @@
       "wtf": "dfa",
       "tauStep": 50,
       "k": 1,
-      "lag": 2,
-      "logInc": true
-    },
-    {
-      "transform": "x_z",
-      "q": 2,
-      "wtf": "dfa",
-      "tauStep": 50,
-      "k": 1,
       "lag": 3,
       "logInc": true
     },
@@ -5320,69 +4599,6 @@
       "windowType": "hamming",
       "nf": "[]",
       "doLogAbs": false
-    },
-    {
-      "transform": "x_z",
-      "psdMeth": "welch",
-      "windowType": "rect",
-      "nf": "[]",
-      "doLogAbs": false
-    },
-    {
-      "transform": "x_z",
-      "psdMeth": "fft",
-      "windowType": "[]",
-      "nf": "[]",
-      "doLogAbs": false
-    }
-  ],
-  "NL_crptool_fnn": [
-    {
-      "transform": "x_z",
-      "maxm": 10,
-      "r": 2,
-      "taum": "mi",
-      "th": "[]",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "maxm": 10,
-      "r": 2,
-      "taum": "ac",
-      "th": "[]",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "maxm": 10,
-      "r": 2,
-      "taum": 1,
-      "th": "[]",
-      "randomSeed": "default"
-    }
-  ],
-  "NL_TISEAN_fnn": [
-    {
-      "transform": "x_z",
-      "tau": "ac",
-      "maxm": 10,
-      "theilerWin": 0.05,
-      "justBest": 0
-    },
-    {
-      "transform": "x_z",
-      "tau": "mi",
-      "maxm": 10,
-      "theilerWin": 0.05,
-      "justBest": 0
-    },
-    {
-      "transform": "x_z",
-      "tau": 1,
-      "maxm": 10,
-      "theilerWin": 0.05,
-      "justBest": 0
     }
   ],
   "SY_TISEAN_nstat_z": [
@@ -5395,20 +4611,6 @@
       "transform": "x_z",
       "numSeg": 5,
       "embedParams": "{1"
-    }
-  ],
-  "NL_TISEAN_d2": [
-    {
-      "transform": "x_z",
-      "tau": 1,
-      "maxm": 10,
-      "theilerWin": 0
-    },
-    {
-      "transform": "x_z",
-      "tau": "ac",
-      "maxm": 10,
-      "theilerWin": 0.01
     }
   ],
   "NL_TISEAN_c1": [
@@ -5470,14 +4672,6 @@
       "nbins": 40,
       "embedParams": "{ac",
       "doTwo": "fnnmar}"
-    }
-  ],
-  "TSTL_delaytime": [
-    {
-      "transform": "x_z",
-      "maxDelay": 0.1,
-      "past": 1,
-      "randomSeed": "default"
     }
   ],
   "NL_TSTL_dimensions": [
@@ -5636,23 +4830,7 @@
     },
     {
       "transform": "x_z",
-      "tau": "mi",
-      "nsurr": 100,
-      "surrMethod": 1,
-      "surrfn": "tc3",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
       "tau": 1,
-      "nsurr": 100,
-      "surrMethod": 2,
-      "surrfn": "tc3",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": "mi",
       "nsurr": 100,
       "surrMethod": 2,
       "surrfn": "tc3",
@@ -5668,23 +4846,7 @@
     },
     {
       "transform": "x_z",
-      "tau": "mi",
-      "nsurr": 100,
-      "surrMethod": 3,
-      "surrfn": "tc3",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
       "tau": 1,
-      "nsurr": 100,
-      "surrMethod": 1,
-      "surrfn": "trev",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": "mi",
       "nsurr": 100,
       "surrMethod": 1,
       "surrfn": "trev",
@@ -5700,23 +4862,7 @@
     },
     {
       "transform": "x_z",
-      "tau": "mi",
-      "nsurr": 100,
-      "surrMethod": 2,
-      "surrfn": "trev",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
       "tau": 1,
-      "nsurr": 100,
-      "surrMethod": 3,
-      "surrfn": "trev",
-      "randomSeed": "default"
-    },
-    {
-      "transform": "x_z",
-      "tau": "mi",
       "nsurr": 100,
       "surrMethod": 3,
       "surrfn": "trev",
@@ -5744,44 +4890,6 @@
     },
     {
       "detrndmeth": "spline64"
-    },
-    {
-      "detrndmeth": "diff1"
-    },
-    {
-      "detrndmeth": "diff2"
-    },
-    {
-      "detrndmeth": "medianf3"
-    },
-    {
-      "detrndmeth": "medianf4"
-    },
-    {
-      "detrndmeth": "medianf10"
-    },
-    {
-      "detrndmeth": "rav2"
-    },
-    {
-      "detrndmeth": "rav3"
-    },
-    {
-      "detrndmeth": "rav4"
-    },
-    {
-      "detrndmeth": "rav10"
-    },
-    {
-      "detrndmeth": "resample_1_2"
-    },
-    {
-      "detrndmeth": "resample_2_1"
-    }
-  ],
-  "PP_Iterate": [
-    {
-      "dtMeth": "diff"
     }
   ],
   "MF_GP_hyperparameters": [
@@ -5865,11 +4973,6 @@
   "WL_cwt": [
     {
       "transform": "x_z",
-      "wname": "db3",
-      "maxScale": 32
-    },
-    {
-      "transform": "x_z",
       "wname": "sym2",
       "maxScale": 32
     }
@@ -5880,13 +4983,6 @@
       "wname": "db3",
       "amax": "max",
       "delta": 1
-    }
-  ],
-  "WL_DetailCoeffs": [
-    {
-      "transform": "x_z",
-      "wname": "db3",
-      "maxlevel": "max"
     }
   ],
   "WL_coeffs": [
@@ -5938,14 +5034,6 @@
       "level": 5
     }
   ],
-  "MF_arfit": [
-    {
-      "transform": "x_z",
-      "pmin": 1,
-      "pmax": 8,
-      "selector": "sbc"
-    }
-  ],
   "NL_MS_fnn": [
     {
       "transform": "x_z",
@@ -5953,23 +5041,6 @@
       "tau": "mi",
       "th": 5,
       "kth": 1
-    }
-  ],
-  "NL_MS_nlpe": [
-    {
-      "transform": "x_z",
-      "de": 2,
-      "tau": "mi"
-    },
-    {
-      "transform": "x_z",
-      "de": 3,
-      "tau": "ac"
-    },
-    {
-      "transform": "x_z",
-      "de": "fnn",
-      "tau": "mi"
     }
   ],
   "NL_embed_PCA": [
@@ -5995,32 +5066,6 @@
       "model": "ar",
       "order": 2,
       "randomSeed": "default"
-    }
-  ],
-  "MF_steps_ahead": [
-    {
-      "transform": "x_z",
-      "model": "ar",
-      "order": 2,
-      "maxSteps": 6
-    },
-    {
-      "transform": "x_z",
-      "model": "ar",
-      "order": "best",
-      "maxSteps": 6
-    },
-    {
-      "transform": "x_z",
-      "model": "ss",
-      "order": "best",
-      "maxSteps": 6
-    },
-    {
-      "transform": "x_z",
-      "model": "arma",
-      "order": "[3",
-      "maxSteps": "1]"
     }
   ],
   "MF_FitSubsegments": [
@@ -6063,109 +5108,6 @@
       "subsetHow": "2]",
       "samplep": "uniform",
       "randomSeed": "[25"
-    }
-  ],
-  "MF_CompareTestSets": [
-    {
-      "transform": "x_z",
-      "theModel": "ar",
-      "ord": 4,
-      "subsetHow": "rand",
-      "samplep": "[25",
-      "steps": "0.1]",
-      "randomSeed": 1
-    },
-    {
-      "transform": "x_z",
-      "theModel": "ar",
-      "ord": "best",
-      "subsetHow": "uniform",
-      "samplep": "[25",
-      "steps": "0.1]",
-      "randomSeed": 1
-    },
-    {
-      "transform": "x_z",
-      "theModel": "ss",
-      "ord": "best",
-      "subsetHow": "uniform",
-      "samplep": "[25",
-      "steps": "0.1]",
-      "randomSeed": 1
-    },
-    {
-      "transform": "x_z",
-      "theModel": "ss",
-      "ord": 2,
-      "subsetHow": "uniform",
-      "samplep": "[25",
-      "steps": "0.1]",
-      "randomSeed": 1
-    }
-  ],
-  "MF_StateSpaceCompOrder": [
-    {
-      "transform": "x_z",
-      "maxOrder": 8
-    }
-  ],
-  "MF_StateSpace_n4sid": [
-    {
-      "transform": "x_z",
-      "ord": 1,
-      "ptrain": 0.5,
-      "steps": 1
-    },
-    {
-      "transform": "x_z",
-      "ord": 2,
-      "ptrain": 0.5,
-      "steps": 1
-    },
-    {
-      "transform": "x_z",
-      "ord": 3,
-      "ptrain": 0.5,
-      "steps": 1
-    }
-  ],
-  "MF_CompareAR": [
-    {
-      "transform": "x_z",
-      "orders": "1:10",
-      "testHow": "all"
-    },
-    {
-      "transform": "x_z",
-      "orders": "1:10",
-      "testHow": 0.5
-    }
-  ],
-  "MF_armax": [
-    {
-      "transform": "x_z",
-      "orders": "[3",
-      "pTrain": "1]",
-      "numSteps": 0.5
-    },
-    {
-      "transform": "x_z",
-      "orders": "[1",
-      "pTrain": "1]",
-      "numSteps": 0.5
-    },
-    {
-      "transform": "x_z",
-      "orders": "[2",
-      "pTrain": "2]",
-      "numSteps": 0.5
-    }
-  ],
-  "MF_ARMA_orders": [
-    {
-      "transform": "x_z",
-      "pr": "1:6",
-      "qr": "1:4"
     }
   ],
   "MF_ExpSmoothing": [
@@ -6217,19 +5159,6 @@
       "transform": "x_z",
       "periods": 4,
       "IIDs": 1
-    },
-    {
-      "transform": "x_z",
-      "periods": "[2",
-      "IIDs": 4
-    }
-  ],
-  "SY_PPtest": [
-    {
-      "transform": "x_z",
-      "lags": "0:5",
-      "model": "ar",
-      "testStatistic": "t1"
     }
   ],
   "SY_KPSStest": [
@@ -6244,10 +5173,6 @@
     {
       "transform": "x_z",
       "lags": 2
-    },
-    {
-      "transform": "x_z",
-      "lags": "0:10"
     }
   ],
   "MF_hmm_fit": [
